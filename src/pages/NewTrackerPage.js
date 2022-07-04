@@ -72,7 +72,7 @@ export default function NewTrackerPage() {
     <>
       <Navbar />
       <section className="new-tracker-container">
-        <h1 className="page-header">Create a new Tracker</h1>
+        <h1 className="page-header">Create a new tracker</h1>
         <ErrorModal error={error} onClear={clearError} />
         <form className="form" onSubmit={submitHandler}>
           {isLoading && <LoadingSpinner asOverlay />}

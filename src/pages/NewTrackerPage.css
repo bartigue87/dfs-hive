@@ -1,11 +1,21 @@
 .new-tracker-container {
   width: 50%;
   position: relative;
-  margin: 150px auto 30px;
+  margin: 150px auto 50px;
 }
 
 .page-header {
   color: #fcb43a;
   text-align: center;
   margin: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .new-tracker-container {
+    width: 90%;
+  }
+
+  .form-controller input {
+    font-size: 0.9rem !important;
+  }
 }

@@ -18,7 +18,6 @@
   font-weight: 700;
 }
 
-
 .inc-exp-container {
   background-color: white;
   box-shadow: var(--box-shadow);
@@ -115,9 +114,14 @@
 
   .inc-exp-container {
     padding: 8px;
+    display: block;
   }
 
   .list li {
     font-size: 0.75rem;
+  }
+
+  .add-tracker {
+    width: 70%;
   }
 }
