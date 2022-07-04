@@ -1,0 +1,80 @@
+.logged-out-modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  top: 150px;
+  width: 70%;
+  padding: 20px 40px;
+  margin: 0 auto;
+  background: #f3f3f3;
+  color: black;
+  border-radius: 20px;
+}
+
+.logged-out-header {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button {
+  width: 40% !important;
+  margin: 0 auto !important;
+}
+
+.portfolio-header {
+  color: whitesmoke;
+  text-align: center;
+  margin-top: 150px;
+  font-family: "Odibee Sans", cursive;
+  font-size: 3rem;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  margin: 40px auto;
+  width: 50%;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+  gap: 25px;
+  margin: 40px auto;
+  width: 82%;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+  gap: 25px;
+  margin: 40px auto;
+  width: 87%;
+}
+
+@media screen and (max-width: 768px) {
+  .grid1 {
+    width: 85%;
+  }
+
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 85%;
+  }
+
+  .grid3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    gap: 20px;
+  }
+
+  .portfolio-header {
+    margin: 115px 0 20px;
+    font-size: 2rem;
+  }
+}

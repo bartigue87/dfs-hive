@@ -1,0 +1,73 @@
+.link {
+  color: #fcb43a;
+}
+
+.icon {
+  display: none;
+}
+
+.inactive {
+  display: none;
+}
+.active {
+  color: white;
+}
+
+.nav-container {
+  background-color: #23212c;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  align-items: center;
+  color: #fcb43a;
+  border-bottom: 1px solid black;
+  font-family: "Odibee Sans", cursive;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-container h1 {
+  font-size: 2rem;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  gap: 40px;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .icon {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    width: 2rem;
+    border: 0;
+    height: 30%;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .inactive {
+    display: block;
+    position: fixed;
+    top: 79px;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    background-color: rgb(35 33 44 / 97%);
+    padding: min(10vh, 10rem) 2em;
+    flex-direction: column;
+    backdrop-filter: blur(0.5rem);
+    transform: translateX(100%);
+    transition: transform 350ms ease-in;
+  }
+
+  .active {
+    display: none;
+  }
+}

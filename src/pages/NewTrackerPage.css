@@ -1,0 +1,11 @@
+.new-tracker-container {
+  width: 50%;
+  position: relative;
+  margin: 150px auto 30px;
+}
+
+.page-header {
+  color: #fcb43a;
+  text-align: center;
+  margin: 20px;
+}

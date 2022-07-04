@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7fcfe859.css",
+    "main.js": "/static/js/main.121b0364.js",
+    "static/media/twitter-icons-png-2.png": "/static/media/twitter-icons-png-2.b4480425f8090d6d783b.png",
+    "static/media/edit-svgrepo-com.svg": "/static/media/edit-svgrepo-com.066b83c066aca090b8c49ef6707f9b9c.svg",
+    "static/media/trash-svgrepo-com.svg": "/static/media/trash-svgrepo-com.3dbfb9c16c439286c0f827614e292af8.svg",
+    "index.html": "/index.html",
+    "static/media/icon-close.svg": "/static/media/icon-close.d47fda63cbd8b3fedbbc1b2a53f64470.svg",
+    "static/media/icon-hamburger.svg": "/static/media/icon-hamburger.5273efa7c50e96ef3e51e7a2b54048ce.svg",
+    "main.7fcfe859.css.map": "/static/css/main.7fcfe859.css.map",
+    "main.121b0364.js.map": "/static/js/main.121b0364.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7fcfe859.css",
+    "static/js/main.121b0364.js"
+  ]
+}

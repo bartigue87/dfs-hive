@@ -1,0 +1,29 @@
+.brm-container {
+  background-color: #f3c622;
+  margin: 30px auto;
+  padding: 20px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-family: "Signika Negative", sans-serif;
+  position: relative;
+}
+
+.add-tracker {
+  max-height: 10%;
+  border: 1px solid #f3c622;
+  background: #23212d;
+  color: #f3c622;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 20%;
+}
+
+@media screen and (max-width: 768px) {
+  .brm-container {
+    margin: 10px auto;
+    width: 90%;
+  }
+}

@@ -1,0 +1,27 @@
+.footer {
+  text-align: center;
+  background-color: #23212d;
+  border-top: 1px solid black;
+  margin: 0;
+}
+
+.footer__social-links {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.5rem 0;
+  list-style: none;
+  margin: 0;
+}
+
+.footer__social-link-item:not(:last-of-type) {
+  margin-right: 2rem;
+}
+
+.footer__social-image {
+  height: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .footer__social-image {
+    height: 2rem;
+  }
+}
