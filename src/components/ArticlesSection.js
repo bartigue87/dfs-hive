@@ -21,7 +21,6 @@ export default function ArticlesSection() {
             <img src={football} alt="american football" />
             <img src={hockey} alt="hockey player shooting puck" />
           </div>
-          <button className="brm-btn button">Check it out</button>
         </div>
       </div>
     </>

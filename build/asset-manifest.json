@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.07c241d1.css",
-    "main.js": "/static/js/main.cd8564a5.js",
+    "main.css": "/static/css/main.c519472c.css",
+    "main.js": "/static/js/main.b49f63a8.js",
     "static/media/basketball.jpg": "/static/media/basketball.8421b5fda0f54dd27141.jpg",
     "static/media/football.jpg": "/static/media/football.c134c491e0ffe44bf9bc.jpg",
     "static/media/hockey.jpg": "/static/media/hockey.956d7a6bb1475d6d2984.jpg",
     "static/media/brm_tracker.png": "/static/media/brm_tracker.164743ab5d23e1da6b6c.png",
     "static/media/twitter-icons-png-2.png": "/static/media/twitter-icons-png-2.b4480425f8090d6d783b.png",
+    "static/media/prizepicks-logo.jpeg": "/static/media/prizepicks-logo.67f6c2b4bdcf3eac18f9.jpeg",
     "static/media/edit-svgrepo-com.svg": "/static/media/edit-svgrepo-com.066b83c066aca090b8c49ef6707f9b9c.svg",
     "static/media/trash-svgrepo-com.svg": "/static/media/trash-svgrepo-com.3dbfb9c16c439286c0f827614e292af8.svg",
     "index.html": "/index.html",
     "static/media/icon-close.svg": "/static/media/icon-close.d47fda63cbd8b3fedbbc1b2a53f64470.svg",
     "static/media/icon-hamburger.svg": "/static/media/icon-hamburger.5273efa7c50e96ef3e51e7a2b54048ce.svg",
-    "main.07c241d1.css.map": "/static/css/main.07c241d1.css.map",
-    "main.cd8564a5.js.map": "/static/js/main.cd8564a5.js.map"
+    "main.c519472c.css.map": "/static/css/main.c519472c.css.map",
+    "main.b49f63a8.js.map": "/static/js/main.b49f63a8.js.map"
   },
   "entrypoints": [
-    "static/css/main.07c241d1.css",
-    "static/js/main.cd8564a5.js"
+    "static/css/main.c519472c.css",
+    "static/js/main.b49f63a8.js"
   ]
 }

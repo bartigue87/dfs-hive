@@ -22,7 +22,6 @@ export default function BrmSection() {
             of the day along with any deposits or withdrawals you make along the
             way.
           </p>
-          <button className="brm-btn button">Check it out</button>
         </div>
       </div>
     </>
