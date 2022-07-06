@@ -3,7 +3,7 @@
   margin: 50px auto;
 }
 
-.inc-exp-container {
+.tot-bank-container {
   background-color: white;
   box-shadow: var(--box-shadow);
   padding: 20px;
@@ -13,7 +13,7 @@
   border-radius: 20px;
 }
 
-.inc-exp-container > div {
+.tot-bank-container > div {
   flex: 1;
   text-align: center;
 }
@@ -32,12 +32,12 @@
 }
 
 @media screen and (max-width: 768px) {
-  .inc-exp-container {
+  .tot-bank-container {
     padding: 8px;
   }
 
   .total-bank {
-    display: grid;
+    display: grid !important;
     grid-template-columns: 1fr 1fr;
   }
 }

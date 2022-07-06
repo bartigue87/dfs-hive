@@ -13,3 +13,7 @@
 .authentication form {
   margin-bottom: 1rem;
 }
+
+.button {
+  width: 95% !important;
+}

@@ -52,11 +52,11 @@ export default function Tracker(props) {
       <Modal
         show={showConfirmModal}
         onCancel={toggleDeleteModal}
-        header="Are you sure"
+        header="Delete Tracker"
         footerClass="place-item__modal-actions"
         footer={
           <>
-            <div style={{ display: "flex" }}>
+            <div style={{ display: "flex", gap: "10px" }}>
               <Button inverse onClick={toggleDeleteModal}>
                 CANCEL
               </Button>{" "}
@@ -67,7 +67,7 @@ export default function Tracker(props) {
           </>
         }
       >
-        <p>Are you sure you want to delete this?</p>
+        <p>Are you sure you want to delete this tracker?</p>
       </Modal>
       <div className="brm-container">
         <div className="top-right">

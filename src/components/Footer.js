@@ -3,10 +3,10 @@ import email from "../images/email.png";
 import twitter from "../images/twitter-icons-png-2.png";
 import "./Footer.css";
 
-export default function Footer() {
+export default function Footer(props) {
   return (
     <>
-      <footer role="contentinfo" className="footer">
+      <footer role="contentinfo" className={`footer ${props.className}`}>
         <div className="row">
           <ul className="footer__social-links">
             <li className="footer__social-link-item">

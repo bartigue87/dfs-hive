@@ -1,18 +1,21 @@
 import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import "./ArticlesPage.css";
-import Card from "../UIElements/Card";
+import "./HomePage.css";
+import BrmSection from "../components/BrmSection";
+import ArticlesSection from "../components/ArticlesSection";
+import MyPlaysSection from "../components/MyPlaysSection";
 
 export default function HomePage() {
   return (
     <>
       <Navbar />
-      <Card className="coming-soon">
-        <h1>Articles</h1>
-        <h4>Coming Soon</h4>
-      </Card>
-      <Footer />
+      <div className="page">
+        <BrmSection />
+        <ArticlesSection />
+        <MyPlaysSection />
+        <Footer className="homepage-footer" />
+      </div>
     </>
   );
 }

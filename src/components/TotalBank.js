@@ -32,7 +32,7 @@ export default function TotalBank(props) {
   };
 
   return (
-    <div className="inc-exp-container total-bank">
+    <div className="tot-bank-container total-bank">
       <div>
         <h5>Deposits</h5>
         <p className="money minus">{deposit.toFixed(2)}</p>

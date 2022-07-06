@@ -102,6 +102,13 @@
   outline: 0;
 }
 
+@media screen and (max-width: 1000px) {
+  .inc-exp-container {
+    padding: 8px;
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .brm-container {
     margin: 10px auto;

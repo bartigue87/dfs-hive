@@ -56,7 +56,6 @@ export default function UpdateTrackerPage() {
         const responseData = await sendRequest(
           `${process.env.REACT_APP_BACKEND_URL}/trackers/${trackerId}`
         );
-        console.log("responseData", responseData);
         setLoadedTracker(responseData.tracker);
         setFormData(
           {
@@ -95,6 +94,10 @@ export default function UpdateTrackerPage() {
           deposit: formState.inputs.deposit.value,
           withdrawals: formState.inputs.withdrawals.value,
           currentBalance: formState.inputs.currentBalance.value,
+          net:
+            formState.inputs.currentBalance.value -
+            formState.inputs.deposit.value +
+            formState.inputs.withdrawals.value,
         }),
         {
           "Content-Type": "application/json",
