@@ -7,7 +7,7 @@ export default function Footer(props) {
   return (
     <>
       <footer role="contentinfo" className={`footer ${props.className}`}>
-        <div className="row">
+        <div>
           <ul className="footer__social-links">
             <li className="footer__social-link-item">
               <a href="mailto:bwartigue@gmail.com">
