@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 export default function MyPlaysSection() {
   return (
     <>
-      <div className="brm-div section">
+      <div className="plays-div section">
         <div className="brm-right-section">
           <h3>My Plays</h3>
           <p className="brm-p">
