@@ -58,7 +58,8 @@ export default function Auth() {
             "Content-Type": "application/json",
           }
         );
-        auth.login(responseData.userId, responseData.token);
+        console.log("response data", responseData);
+        auth.login(responseData.userId, responseData.email, responseData.token);
         navigate(`/articles`, { replace: true });
       } catch (err) {}
     } else {
@@ -76,7 +77,7 @@ export default function Auth() {
           }
         );
         navigate(`/articles`, { replace: true });
-        auth.login(responseData.userId, responseData.token);
+        auth.login(responseData.userId, responseData.email, responseData.token);
       } catch (err) {}
     }
   }

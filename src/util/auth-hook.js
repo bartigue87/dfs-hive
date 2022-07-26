@@ -6,10 +6,12 @@ export const useAuth = () => {
   const [token, setToken] = useState(false);
   const [tokenExpirationDate, setTokenExpirationDate] = useState();
   const [userId, setUserId] = useState(false);
+  const [userEmail, setUserEmail] = useState(false);
 
-  const login = useCallback((uid, token, expirationDate) => {
+  const login = useCallback((uid, email, token, expirationDate) => {
     setToken(token);
     setUserId(uid);
+    setUserEmail(email);
     const tokenExpDate =
       expirationDate || new Date(new Date().getTime() + 1000 * 60 * 60);
     setTokenExpirationDate(tokenExpDate);
@@ -17,6 +19,7 @@ export const useAuth = () => {
       "userData",
       JSON.stringify({
         userId: uid,
+        userEmail: email,
         token: token,
         expiration: tokenExpDate.toISOString(),
       })
@@ -27,6 +30,7 @@ export const useAuth = () => {
     setToken(null);
     setTokenExpirationDate(null);
     setUserId(null);
+    setUserEmail(null);
     localStorage.removeItem("userData");
   }, []);
 
@@ -55,5 +59,5 @@ export const useAuth = () => {
     }
   }, [login]);
 
-  return { token, login, logout, userId };
+  return { token, userEmail, login, logout, userId };
 };
