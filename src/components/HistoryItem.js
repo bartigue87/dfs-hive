@@ -21,9 +21,6 @@ export default function HitoryItem(props) {
           <p>{props.title}:</p>
           <p>${props.amount}</p>
           <p>{props.date}</p>
-          <button className="delete-btn" onClick={submitDelete}>
-            X
-          </button>
         </li>
       }
     </>
