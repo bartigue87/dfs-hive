@@ -1,17 +1,35 @@
-import React from "react";
-import Footer from "../components/Footer";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
-import "./ArticlesPage.css";
-import Card from "../UIElements/Card";
+import Footer from "../components/Footer";
+import { useNavigate } from "react-router";
+import { useHttpClient } from "../util/http-hook";
+import ArticleList from "../components/ArticleList";
+import "./UserTrackers.css";
 
-export default function ArticlesPage() {
+export default function UserTrackers() {
+  let navigate = useNavigate();
+  const { isLoading, sendRequest } = useHttpClient();
+  const [loadedArticles, setLoadedArticles] = useState();
+
+  useEffect(() => {
+    const fetchArticles = async () => {
+      try {
+        const responseData = await sendRequest(
+          `${process.env.REACT_APP_BACKEND_URL}/articles`
+        );
+        setLoadedArticles(responseData.articles);
+      } catch (err) {}
+    };
+    fetchArticles();
+  }, [sendRequest]);
+
   return (
     <>
       <Navbar />
-      <Card className="coming-soon">
-        <h1>Articles</h1>
-        <h4>Coming Soon</h4>
-      </Card>
+      <h1 className="portfolio-header">Articles</h1>
+      <section>
+        {!isLoading && loadedArticles && <ArticleList items={loadedArticles} />}
+      </section>
       <Footer />
     </>
   );

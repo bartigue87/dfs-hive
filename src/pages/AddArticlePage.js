@@ -38,7 +38,7 @@ export default function AddArticlePage() {
   );
 
   function handleRedirect() {
-    navigate(`/${auth.userId}/brm-tracker`, { replace: true });
+    navigate(`/$articles`, { replace: true });
   }
 
   async function submitHandler(event) {
@@ -46,7 +46,7 @@ export default function AddArticlePage() {
     if (auth.userId === admin) {
       try {
         await sendRequest(
-          `${process.env.REACT_APP_BACKEND_URL}/trackers`,
+          `${process.env.REACT_APP_BACKEND_URL}/articles`,
           "POST",
           JSON.stringify({
             title: formState.inputs.title.value,
