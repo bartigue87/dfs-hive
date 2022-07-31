@@ -33,6 +33,10 @@ export default function AddArticlePage() {
         value: "",
         isValid: false,
       },
+      preview: {
+        value: "",
+        isValid: false,
+      },
     },
     false
   );
@@ -51,6 +55,7 @@ export default function AddArticlePage() {
           JSON.stringify({
             title: formState.inputs.title.value,
             articleBody: formState.inputs.deposit.value,
+            preview: formState.inputs.preview.value,
           }),
           {
             "Content-Type": "application/json",
@@ -92,6 +97,18 @@ export default function AddArticlePage() {
               label="Body"
               placeholder="Body"
               errorText="Please enter a valid body"
+              validators={[VALIDATOR_REQUIRE()]}
+              onInput={inputHandler}
+            />
+          </div>
+          <div className="form-controller">
+            <Input
+              id="preview"
+              element="textarea"
+              type="textarea"
+              label="Preview"
+              placeholder="Preview"
+              errorText="Please enter a valid preview"
               validators={[VALIDATOR_REQUIRE()]}
               onInput={inputHandler}
             />

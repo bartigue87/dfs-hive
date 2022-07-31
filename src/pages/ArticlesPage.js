@@ -27,7 +27,7 @@ export default function UserTrackers() {
     <>
       <Navbar />
       <h1 className="portfolio-header">Articles</h1>
-      <section>
+      <section className="article-section">
         {!isLoading && loadedArticles && <ArticleList items={loadedArticles} />}
       </section>
       <Footer />
