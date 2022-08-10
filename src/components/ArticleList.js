@@ -22,6 +22,8 @@ const ArticleList = (props) => {
           id={article.id}
           title={article.title}
           articleBody={article.articleBody}
+          preview={article.preview}
+          genre={article.genre}
           image={article.image}
         />
       ))}

@@ -37,15 +37,21 @@ export default function AddArticlePage() {
         value: "",
         isValid: false,
       },
+      genre: {
+        value: "",
+        isValid: false,
+      },
     },
     false
   );
 
   function handleRedirect() {
-    navigate(`/$articles`, { replace: true });
+    navigate(`/`, { replace: true });
   }
 
   async function submitHandler(event) {
+    console.log(auth.userId);
+    console.log("admin:", admin);
     event.preventDefault();
     if (auth.userId === admin) {
       try {
@@ -54,16 +60,18 @@ export default function AddArticlePage() {
           "POST",
           JSON.stringify({
             title: formState.inputs.title.value,
-            articleBody: formState.inputs.deposit.value,
+            articleBody: formState.inputs.articleBody.value,
             preview: formState.inputs.preview.value,
+            genre: formState.inputs.genre.value,
           }),
           {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${auth.token}`,
           }
         );
         handleRedirect();
-      } catch (err) {}
+      } catch (err) {
+        console.log("WRONG");
+      }
     } else {
       setError("You are not authorized!");
     }
@@ -85,6 +93,18 @@ export default function AddArticlePage() {
               label="Title of article"
               placeholder="Title"
               errorText="Please enter a valid title"
+              validators={[VALIDATOR_REQUIRE()]}
+              onInput={inputHandler}
+            />
+          </div>
+          <div className="form-controller">
+            <Input
+              id="genre"
+              element="input"
+              type="text"
+              label="Genre"
+              placeholder="Genre"
+              errorText="Please enter a valid genre"
               validators={[VALIDATOR_REQUIRE()]}
               onInput={inputHandler}
             />
@@ -114,7 +134,11 @@ export default function AddArticlePage() {
             />
           </div>
           <div style={{ display: "flex", gap: "25px" }}>
-            <Button type="submit" disabled={!formState.isValid}>
+            <Button
+              type="submit"
+              disabled={!formState.isValid}
+              onClick={submitHandler}
+            >
               Submit
             </Button>
             <button onClick={handleRedirect} className="button">

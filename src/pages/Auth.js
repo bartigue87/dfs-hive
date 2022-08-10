@@ -76,7 +76,7 @@ export default function Auth() {
             "Content-Type": "application/json",
           }
         );
-        navigate(`/articles`, { replace: true });
+        navigate(`/`, { replace: true });
         auth.login(responseData.userId, responseData.email, responseData.token);
       } catch (err) {}
     }

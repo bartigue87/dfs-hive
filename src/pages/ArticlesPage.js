@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import { useNavigate } from "react-router";
 import { useHttpClient } from "../util/http-hook";
 import ArticleList from "../components/ArticleList";
-import "./UserTrackers.css";
+import "./ArticlesPage.css";
 
 export default function UserTrackers() {
   let navigate = useNavigate();
@@ -18,6 +18,7 @@ export default function UserTrackers() {
           `${process.env.REACT_APP_BACKEND_URL}/articles`
         );
         setLoadedArticles(responseData.articles);
+        console.log("loadedArticles:", responseData.articles);
       } catch (err) {}
     };
     fetchArticles();
