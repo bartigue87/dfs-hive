@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useNavigate } from "react-router";
 import { useHttpClient } from "../util/http-hook";
 import ArticleList from "../components/ArticleList";
-import "./ArticlesPage.css";
+import "./AllArticlesPage.css";
 
-export default function UserTrackers() {
-  let navigate = useNavigate();
+export default function AllArticlesPage() {
   const { isLoading, sendRequest } = useHttpClient();
   const [loadedArticles, setLoadedArticles] = useState();
 

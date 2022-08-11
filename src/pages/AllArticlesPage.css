@@ -23,3 +23,12 @@
 .article-btn {
   width: 50% !important;
 }
+
+@media screen and (max-width: 768px) {
+  .article-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    gap: 20px;
+    width: 80%;
+  }
+}
