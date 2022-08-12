@@ -8,23 +8,37 @@
 
 .article-item {
   background: white;
-  display: flex;
-  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 15px 5px;
 }
 
 .article-text-container {
   display: flex;
-  width: 100%;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  align-items: start;
+  padding-left: 30px;
 }
 
 .article-btn {
   width: 50% !important;
 }
 
-@media screen and (max-width: 768px) {
+.article-image {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.article-image-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+@media screen and (max-width: 1068px) {
   .article-section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));

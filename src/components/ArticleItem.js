@@ -13,7 +13,9 @@ export default function ArticleItem(props) {
   }
   return (
     <div className="article-item">
-      <img className="article-image" src={props.image} alt="" />
+      <div className="article-image-container">
+        <img className="article-image" src={props.image} alt="" />
+      </div>
       <div className="article-text-container">
         <h1 className="site">{props.title}</h1>
         <h6>{props.genre}</h6>
