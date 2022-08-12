@@ -60,7 +60,7 @@ export default function Auth() {
         );
         console.log("response data", responseData);
         auth.login(responseData.userId, responseData.email, responseData.token);
-        navigate(`/articles`, { replace: true });
+        navigate(`/`, { replace: true });
       } catch (err) {}
     } else {
       try {
