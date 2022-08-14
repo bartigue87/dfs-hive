@@ -29,14 +29,6 @@ export default function AddTransactionPage() {
     fetchTracker();
   }, [sendRequest, trackerId]);
 
-  //   const findTracker = (trackerId) => {
-  //     setLoadedTracker((prevTrackers) =>
-  //       prevTrackers.find((tracker) => tracker.id === trackerId)
-  //     );
-  //   };
-
-  console.log("loadedTracker:", loadedTracker);
-
   return (
     <>
       <Navbar />

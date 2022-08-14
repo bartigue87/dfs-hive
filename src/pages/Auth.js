@@ -58,8 +58,9 @@ export default function Auth() {
             "Content-Type": "application/json",
           }
         );
-        auth.login(responseData.userId, responseData.token);
-        navigate(`/articles`, { replace: true });
+        console.log("response data", responseData);
+        auth.login(responseData.userId, responseData.email, responseData.token);
+        navigate(`/`, { replace: true });
       } catch (err) {}
     } else {
       try {
@@ -75,8 +76,8 @@ export default function Auth() {
             "Content-Type": "application/json",
           }
         );
-        navigate(`/articles`, { replace: true });
-        auth.login(responseData.userId, responseData.token);
+        navigate(`/`, { replace: true });
+        auth.login(responseData.userId, responseData.email, responseData.token);
       } catch (err) {}
     }
   }

@@ -9,6 +9,8 @@ export default function Navbar() {
   const auth = useContext(AuthContext);
   let navigate = useNavigate();
 
+  const admin = process.env.REACT_APP_ADMIN;
+
   function handleLogout() {
     auth.logout();
     navigate("/login", { replace: true });
@@ -46,6 +48,11 @@ export default function Navbar() {
           <NavLink to="/brandons-plays">
             <li className="link">Brandon's Plays</li>
           </NavLink>
+          {auth.userId === admin && (
+            <NavLink to="/admin">
+              <li className="link">Admin</li>
+            </NavLink>
+          )}
           <NavLink to="/login">
             {auth.isLoggedIn ? (
               <li className="link" onClick={handleLogout}>
@@ -71,7 +78,11 @@ export default function Navbar() {
           <NavLink to="/brandons-plays">
             <li className="link">Brandon's Plays</li>
           </NavLink>
-
+          {auth.userId === admin && (
+            <NavLink to="/admin">
+              <li className="link">Admin</li>
+            </NavLink>
+          )}
           <NavLink to="/login">
             {auth.isLoggedIn ? (
               <li className="link" onClick={handleLogout}>
