@@ -9,8 +9,9 @@ import { AuthContext } from "../util/auth-context";
 import ErrorModal from "../UIElements/ErrorModal";
 import LoadingSpinner from "../UIElements/LoadingSpinner";
 import { useParams } from "react-router-dom";
+import "./ArticlePage.css";
 
-export default function UpdateTrackerPage() {
+export default function ArticlePage() {
   const auth = useContext(AuthContext);
   const articleId = useParams().aid;
   let navigate = useNavigate();
@@ -32,18 +33,23 @@ export default function UpdateTrackerPage() {
         const responseData = await sendRequest(
           `${process.env.REACT_APP_BACKEND_URL}/articles/${articleId}`
         );
-        setLoadedArticle(responseData.articles);
+        setLoadedArticle(responseData.article);
       } catch (err) {}
     };
     fetchArticle();
   }, [sendRequest, articleId]);
 
-  console.log(loadedArticle);
+  console.log("loadedArticle:", loadedArticle);
 
   return (
     <>
       <Navbar />
-
+      {loadedArticle && (
+        <div className="article-container">
+          <h1>{loadedArticle.title}</h1>
+          <p>{loadedArticle.articleBody}</p>
+        </div>
+      )}
       <Footer />
     </>
   );
